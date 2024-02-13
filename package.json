@@ -1,0 +1,21 @@
+{
+  "name": "ra16-diploma_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "forever server.js",
+    "watch": "forever -w server.js",
+    "dev": "nodemon server"
+  },
+  "author": "Zrazhevskii",
+  "license": "ISC",
+  "dependencies": {
+    "forever": "^4.0.3",
+    "koa": "^2.15.0",
+    "koa-body": "^6.0.1",
+    "koa-router": "^12.0.1",
+    "koa2-cors": "^2.0.6"
+  }
+}
