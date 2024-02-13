@@ -3,7 +3,7 @@ const fs = require('fs');
 const Koa = require('koa');
 const Router = require('koa-router');
 const cors = require('koa2-cors');
-const koaBody = require('koa-body');
+const koaBody = require('koa-body').default;
 
 const categories = JSON.parse(fs.readFileSync('./data/categories.json'));
 const items = JSON.parse(fs.readFileSync('./data/products.json'));
@@ -115,7 +115,7 @@ router.post('/api/order', async (ctx, next) => {
 app.use(router.routes())
 app.use(router.allowedMethods());
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 7070;
 const server = http.createServer(app.callback());
 server.listen(port, (err) => {
     if (err) {
